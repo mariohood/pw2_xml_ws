@@ -6,9 +6,15 @@ import javax.jws.WebService;
 @WebService (name = "Big", serviceName = "Big")
 public class MyBigWS {
     @WebMethod
-    public int convert(int a){
+    public int convert1(int a){
 
-        return a;
+        return a*2;
+    }
+
+    @WebMethod
+    public int convert2(int a){
+
+        return a*3;
     }
     
 }

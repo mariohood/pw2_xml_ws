@@ -31,9 +31,23 @@ public interface Big {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "convert", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.Convert")
-    @ResponseWrapper(localName = "convertResponse", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.ConvertResponse")
-    public int convert(
+    @RequestWrapper(localName = "convert2", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.Convert2")
+    @ResponseWrapper(localName = "convert2Response", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.Convert2Response")
+    public int convert2(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "convert1", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.Convert1")
+    @ResponseWrapper(localName = "convert1Response", targetNamespace = "http://ws.ifrs.dev/", className = "dev.ifrs.ws.Convert1Response")
+    public int convert1(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
 
